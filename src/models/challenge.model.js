@@ -7,8 +7,12 @@ const challengeSchema = new mongoose.Schema(
     difficulty: { type: String, required: true },
     color: { type: String, required: true },
     points: { type: Number, required: true },
-    input: { type: String, required: true },
-    output: { type: String, required: true },
+    testCases: [
+      {
+        input: { type: String, required: true },
+        output: { type: String, required: true },
+      },
+    ],
     instructions: {
       description: { type: String, required: true },
       instructions: { type: String, required: true },
